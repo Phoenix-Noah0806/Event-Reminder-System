@@ -66,6 +66,7 @@ void MainWindow::addEvent(const QString &title, const QString &desc, const QDate
 
     auto *itDesc = new QTableWidgetItem(desc);
     itDesc->setFlags(itDesc->flags() | Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsEditable);
+    itDesc->setTextAlignment(Qt::AlignLeft | Qt::AlignTop); // better readability
     ui->tableWidget->setItem(row, 1, itDesc);
 
     auto *itDate = new QTableWidgetItem(date.toString(Qt::ISODate));
